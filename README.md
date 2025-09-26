@@ -27,7 +27,7 @@ Repo: [Source code](https://github.com/skmdJeesan/Agency.ai)
 
 ---
 
-*This project is an educational/portfolio clone — not the official Ochi site.*
+*This project is for educational purpose— not the official site.*
 
 ## Contact
 skmdjeesan@gmail.com
