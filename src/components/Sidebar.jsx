@@ -7,7 +7,7 @@ function Sidebar({ isOpen, setIsOpen }) {
     <div
       className={`fixed top-0 right-0 h-screen w-[55vw] md:hidden z-50
         bg-[rgba(79,68,229,0.74)] backdrop-blur-sm text-white
-        transform origin-top-right transition-transform transition-opacity duration-300 ease-in-out
+        transform origin-top-right transition-transform duration-300 ease-in-out
         ${isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0 pointer-events-none"}`}
       aria-hidden={!isOpen}
     >
