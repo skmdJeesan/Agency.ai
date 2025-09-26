@@ -20,10 +20,10 @@ function Sidebar({ isOpen, setIsOpen }) {
 
       <nav className="flex flex-col gap-6 py-20 px-8 text-2xl">
         {/* close on click so it behaves like a mobile drawer */}
-        <a href="#home" onClick={() => setIsOpen(false)}>Home</a>
+        <a href="#" onClick={() => setIsOpen(false)}>Home</a>
         <a href="#services" onClick={() => setIsOpen(false)}>Services</a>
         <a href="#work" onClick={() => setIsOpen(false)}>Our Work</a>
-        <a href="#contact" onClick={() => setIsOpen(false)}>Contact Us</a>
+        <a href="#contact-us" onClick={() => setIsOpen(false)}>Contact Us</a>
       </nav>
     </div>
   );
