@@ -3,6 +3,7 @@ import assets from '../assets/assets'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import './Navbar.css'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,7 +47,7 @@ function Footer({theme, setTheme}) {
           </div>
         </div>
         <div className="fright md:w-[40%] w-full flex flex-col gap-3">
-          <div className="text-gray-800 -mb-2">Subscribe to our newsletter</div>
+          <div className="text-gray-600 -mb-2">Subscribe to our newsletter</div>
           <div className="text-sm text-gray-400">The latest news, articles, and resources, sent to your inbox weekly.</div>
           <div className="">
             <form className='flex md:justify-between gap-2'>

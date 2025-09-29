@@ -1,0 +1,10 @@
+
+.nav {transition: 0.5s;}
+
+.dark .nav {
+  background-color: #0000008a;
+  color: #fff;
+}
+
+.dark a {color: #ffffffdc}
+.dark{background-color: #111; color: #fff}

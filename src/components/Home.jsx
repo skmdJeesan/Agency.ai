@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Home() {
+function Home({theme}) {
   const homeRef = useRef()
   useGSAP(() => {
     let tl = gsap.timeline()
@@ -31,7 +31,7 @@ function Home() {
     <div 
       id=''
       className={`min-h-screen w-full md:mt-15 mt-20 flex flex-col md:gap-10 gap-8 items-center py-20 md:px-24 px-4 md:bg-center bg-cover md:mb-0 mb-20`}
-      style={{ backgroundImage: `url(${assets.bgImage1})` }}
+      style={{ backgroundImage: `url(${theme === 'light' ? assets.bgImage1 : null})` }}
       ref={homeRef}
     >
 

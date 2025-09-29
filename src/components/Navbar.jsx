@@ -9,14 +9,18 @@ import gsap from "gsap";
 function Navbar({isOpen, setIsOpen, theme, setTheme,}) {
   const navRef = useRef()
 
+  const toggle_theme = () => {
+    theme === 'light' ? setTheme('dark') : setTheme('light')
+  }
+
   useGSAP(() => {
-    gsap.from(navRef.current,{opacity: 0, y: -100, duration: 1,})
+    gsap.from(navRef.current,{opacity: 0, y: -50, duration: 1,})
   })
 
   return (
-    <div ref={navRef} className='fixed w-full flex items-center md:justify-around justify-between md:px-10 px-4 md:py-4 py-2 bg-transparent backdrop-blur-2xl z-[10]'>
+    <div ref={navRef} className='nav fixed w-full flex items-center md:justify-around justify-between md:px-10 px-1 md:py-4 py-2 bg-transparent backdrop-blur-2xl z-[10]'>
       <img className='w-36' src={theme === 'dark' ? assets.logo_dark : assets.logo} alt="" />
-
+      
       <div className="md:flex gap-5 hidden transition-all">
         {/* {['home', 'service', 'our work', 'contact us'].map((elem,idx) => {
           return <a key={idx} href='#' className="capitalize text-[13px] hover:border-b-1 leading-[0.95] transition-all text-gray-500">{elem}</a>
@@ -28,7 +32,11 @@ function Navbar({isOpen, setIsOpen, theme, setTheme,}) {
       </div>
 
       <div className="flex items-center gap-4">
-        <div className="md:w-6 md:h-6 w-8 h-8 rounded-full border-1 flex items-center justify-center -rotate-45 text-xl md:text-base"><MdOutlineNightlight /></div>
+        <img
+          onClick={toggle_theme}
+          src={theme === 'light' ? assets.moon_icon : assets.sun_icon} alt=""
+          className="md:w-6 md:h-6 w-8 h-8 rounded-full border-1 flex items-center justify-center md:p-[2px] p-[4px] cursor-pointer"
+        />
         <a href='#contact-us' className="button md:flex hidden bg-[#5044E5] py-2 px-8 rounded-full items-center gap-2 text-white text-xs ">Connect <FaArrowRight />
         </a>
         <div 
